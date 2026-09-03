@@ -1,0 +1,18 @@
+# Files that belong in the repo but must NOT be deployed to smartplaycaddie.com.
+#
+# 2026-09-03 — CLAUDE.md was committed and immediately became fetchable at
+# https://smartplaycaddie.com/CLAUDE.md (HTTP 200), publishing internal dev notes and local
+# filesystem paths on the public marketing site. I had inferred .md was not served because
+# README.md returns 404 — that is Vercel excluding README specifically, not an extension rule.
+# An inference from one sample is not a check; the check is curl after deploy.
+#
+# .vercelignore is the right tool rather than deleting the file or adding a 404 rewrite: the
+# file must stay in git so a fresh clone and Cowork both get the orientation it carries, while
+# never reaching the deployment at all.
+CLAUDE.md
+
+# Untracked local staging duplicate of this very site. Ignored here too, so it can never be
+# uploaded as a second copy of the pages if it is ever added to the repo.
+site-vercel/
+shots2/
+smartplaycaddie-site.zip
