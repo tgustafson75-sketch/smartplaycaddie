@@ -6,14 +6,19 @@
 <title>SmartPlay Caddie FAQ — Pricing, Features and Support</title>
 <meta name="description" content="Get answers to your questions about the SmartPlay Caddie app, its features, pricing, and how it can improve your game. Visit the SmartPlay Caddie FAQ now!">
 <link rel="canonical" href="https://smartplaycaddie.com/faq">
+<meta name="apple-itunes-app" content="app-id=6772344465">
 <meta name="theme-color" content="#0B1F13">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SmartPlay Caddie">
 <meta property="og:title" content="SmartPlay Caddie FAQ — Pricing, Features and Support">
 <meta property="og:description" content="Get answers to your questions about the SmartPlay Caddie app, its features, pricing, and how it can improve your game. Visit the SmartPlay Caddie FAQ now!">
 <meta property="og:url" content="https://smartplaycaddie.com/faq">
-<meta property="og:image" content="https://smartplaycaddie.com/favicon-512.png">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://smartplaycaddie.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SmartPlay Caddie — your AI golf caddie, out loud">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://smartplaycaddie.com/og.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/favicon-180.png">
@@ -31,6 +36,134 @@ if ('serviceWorker' in navigator) {
       .then(function (ks) { ks.forEach(function (k) { caches.delete(k); }); })
       .catch(function () {});
   }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does SmartPlay Caddie calculate my handicap?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. It keeps a running estimated Handicap Index using World Handicap System math — your best 8 score differentials out of your last 20 rounds, with the net double bogey cap applied hole by hole. One thing to know: the in-app index treats every course as a 72.0 rating and 113 slope, so it lands close to your GHIN number but is not identical to it. It is an estimate for your own use — scores are not posted to GHIN, so it is not an official index."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I bring my handicap and round history over from another app?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and you don't have to retype anything. Take a screenshot of your round history in Golfshot, 18Birdies or GHIN, and SmartPlay Caddie reads every round off the screenshot in one pass. You review what it found, fix any round it read as 9 holes instead of 18, and it recomputes your index from the whole history. Single scorecards import the same way."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if my course isn't in the database?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Live GPS yardages need the course geometry, so a course we don't have yet won't give you front/middle/back numbers. Your caddie still knows the course and will talk strategy through the round. Email us the course and we'll look at adding it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I already use Arccos. Can I bring my club distances across?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Open Arccos, screenshot the Smart Club Distances screen, and SmartPlay Caddie reads each club's average off it and seeds your bag. You tell it whether those numbers are carry or total — Arccos defaults to total — so your caddie never quotes you a carry number that was really a total. Only clubs Arccos actually has a number for get imported; nothing is padded or guessed. This is a one-time import of the numbers, not a live connection to Arccos sensors."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there an Apple Watch or Galaxy Watch app?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not yet. There is no watch companion app today — everything runs from your phone. It is on the roadmap, and the voice-first design means your phone can stay in your pocket in the meantime."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need club sensors or any extra hardware?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Your phone is the whole kit — GPS for the yardages, the camera for SmartMotion swing analysis, and your voice for everything else."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does it work without a cell signal?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Partly. Courses you have downloaded are stored on your phone, so GPS yardages and the hole maps keep working with no signal. The AI caddie — the spoken club calls and swing analysis — needs a data connection, so on a dead-zone course, download the course before you tee off."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How much does the SmartPlay Caddie app cost?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "A SmartPlay Caddie subscription is $9.99 a month, or $79 a year (US pricing — prices vary by country and are shown in your local currency at checkout). Every feature is included: GPS yardage, club advice, voice caddie, swing analysis and all updates. No ads, no hidden fees."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is SmartPlay Caddie compatible with my device?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "SmartPlay Caddie runs on iPhone and Android — the App Store and Google Play listings each show the exact OS version your device needs."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does shot tracking work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Two ways. During a round, the app uses GPS to notice when you’ve hit — you stood still at the ball, then moved on — and your caddie asks what you hit. Or just say it: “7-iron, 165, on the green.” Your shots feed the scorecard, greens in regulation, putts and your longest drive."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What if I need help using the app?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Email support@smartplaycaddie.com. If something breaks, report it from inside the app — the report reaches us with the details attached, so you don’t have to describe it twice."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can this app really help me break 100 or 90?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No app swings the club for you. What SmartPlay Caddie does: on every shot it gives you the club, the target and the miss to favor, and after the round it shows where the strokes went — greens in regulation, putts, and your score against par on each nine. Most strokes between 100 and 90 are decisions, and decisions are what it’s built for."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is there a free trial available?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. New subscribers get a free trial through the App Store or Google Play — right now the first 2 months. The store shows the exact offer before you confirm. The subscription renews automatically unless you cancel at least 24 hours before the trial ends: on iPhone in Settings → your Apple Account → Subscriptions; on Android in Google Play → Payments & subscriptions."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What makes SmartPlay Caddie different from other golf apps?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Most golf apps hand you numbers and leave the decision to you. SmartPlay Caddie gives you the decision — spoken, hands-free, while you’re standing over the ball. It needs no sensors or club tags, just the phone you already have, and it learns your game across rounds instead of starting over every time."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do you offer a money-back guarantee?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Purchases are handled by the App Store or Google Play, so refunds come from them rather than from us. On iPhone, request one at reportaproblem.apple.com; on Android, through Google Play’s order history. If something isn’t working, email support@smartplaycaddie.com first — we’d rather fix it, and we’ll help with the refund request if that’s the right answer."
+   }
+  }
+ ]
 }
 </script>
 </head>
@@ -55,7 +188,7 @@ if ('serviceWorker' in navigator) {
 <footer><div class="wrap frow">
   <span class="tag">Full Swing Ahead.</span>
   <span>A <a href="https://smartplayapps.com">SmartPlay AI</a> product &middot; Also from us: <a href="https://smartbayai.com">SmartBay AI</a> in the simulator, <a href="https://smartplaygolf.com">SmartPlay Golf</a> in the browser. Copyright &copy; 2026 SmartPlay AI LLC &mdash; All Rights Reserved.</span>
-  <span class="flinks"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:support@smartplaycaddie.com">Support</a></span>
+  <span class="flinks"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:support@smartplaycaddie.com">Support</a><a href="https://www.instagram.com/smartplaycaddie/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.youtube.com/@smartplaycaddie" rel="me noopener" target="_blank">YouTube</a></span>
 </div></footer>
 </body>
 </html>

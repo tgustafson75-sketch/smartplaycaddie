@@ -97,7 +97,7 @@ footer{border-top:1px solid var(--rule); padding:54px 0 62px; color:var(--cream-
 .frow{display:flex; flex-wrap:wrap; gap:18px 30px; align-items:center}
 footer a{color:var(--cream-dim)}
 footer a:hover{color:var(--cream)}
-.flinks{margin-left:auto; display:flex; gap:26px}
+.flinks{margin-left:auto; display:flex; flex-wrap:wrap; gap:12px 26px}
 .tag{font-family:Archivo,sans-serif; font-weight:800; color:var(--cream); letter-spacing:.02em}
 
 /* legal pages: the repo fragment ships its own light-mode CSS, so give it a
