@@ -129,3 +129,20 @@ footer a:hover{color:var(--cream)}
   .bar{height:auto; flex-wrap:wrap; row-gap:6px; padding-top:12px; padding-bottom:10px}
   nav{margin-left:0; width:100%; justify-content:space-between}
 }
+
+/* click-to-play YouTube (loads YouTube only on click) */
+.watch .yt{position:relative;margin-top:34px;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:var(--surface);
+  box-shadow:0 30px 80px rgba(0,0,0,.45),0 0 0 1px var(--rule)}
+.watch .yt-btn{all:unset;cursor:pointer;display:block;width:100%;height:100%;position:relative}
+.watch .yt-btn img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease}
+.watch .yt-btn:hover img{transform:scale(1.02)}
+.watch .yt-btn:focus-visible{outline:3px solid var(--green-hi);outline-offset:-3px}
+.watch .yt-play{position:absolute;left:69%;top:76%;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;
+  background:var(--green-hi);color:var(--ink);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.4);transition:transform .2s ease}
+.watch .yt-play svg{margin-left:4px}
+@media (max-width:720px){.watch .yt-play{width:50px;height:50px;margin:-25px 0 0 -25px}.watch .yt-play svg{width:24px;height:24px}}
+.watch .yt-btn:hover .yt-play{transform:scale(1.07)}
+.watch .yt-len{position:absolute;right:16px;bottom:14px;background:rgba(11,31,19,.85);color:var(--cream);font-size:13px;
+  font-weight:600;padding:4px 9px;border-radius:7px}
+.watch .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}

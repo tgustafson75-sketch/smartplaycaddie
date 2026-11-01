@@ -116,6 +116,19 @@ if ('serviceWorker' in navigator) {
     showing hole 1 with front, middle and back yardages and a 7-iron club call">
 </div></section>
 
+<section class="watch"><div class="wrap">
+  <p class="eyebrow">See it in 70 seconds</p>
+  <h2>Meet your caddie</h2>
+  <div class="yt" data-id="phRi4HL9-ow">
+    <button type="button" class="yt-btn" aria-label="Play video: Welcome to SmartPlay Caddie (1 minute 11 seconds)">
+      <img src="/video-poster.webp" width="1280" height="720" loading="lazy" alt="Her drive with a fire-streak ball trace and the words Full Swing Ahead">
+      <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span>
+      <span class="yt-len" aria-hidden="true">1:11</span>
+    </button>
+  </div>
+</div></section>
+
+
 <section><div class="wrap">
   <h2>A caddie, not another golf app</h2>
   <div class="shot-pair">
@@ -179,5 +192,16 @@ if ('serviceWorker' in navigator) {
   <span>A <a href="https://smartplayapps.com">SmartPlay AI</a> product &middot; Also from us: <a href="https://smartbayai.com">SmartBay AI</a> in the simulator, <a href="https://smartplaygolf.com">SmartPlay Golf</a> in the browser. Copyright &copy; 2026 SmartPlay AI LLC &mdash; All Rights Reserved.</span>
   <span class="flinks"><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:support@smartplaycaddie.com">Support</a><a href="https://www.instagram.com/smartplaycaddie/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.youtube.com/@smartplaycaddie" rel="me noopener" target="_blank">YouTube</a></span>
 </div></footer>
+<script>
+document.querySelectorAll('.yt').forEach(function(el){
+  el.querySelector('.yt-btn').addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+el.dataset.id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1';
+    f.title='Welcome to SmartPlay Caddie';
+    f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+    f.allowFullscreen=true; el.replaceChildren(f);
+  });
+});
+</script>
 </body>
 </html>
