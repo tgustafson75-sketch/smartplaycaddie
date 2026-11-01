@@ -125,3 +125,7 @@ footer a:hover{color:var(--cream)}
   .shot-pair.flip .media{order:0}
   .legal-sheet{padding:10px 18px 20px}
 }
+@media (max-width:440px){
+  .bar{height:auto; flex-wrap:wrap; row-gap:6px; padding-top:12px; padding-bottom:10px}
+  nav{margin-left:0; width:100%; justify-content:space-between}
+}
