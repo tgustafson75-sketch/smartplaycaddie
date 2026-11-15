@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+# Old app routes from before this site; nothing here serves them.
+Disallow: /api/
+Disallow: /apps/
 
 Sitemap: https://smartplaycaddie.com/sitemap.xml
