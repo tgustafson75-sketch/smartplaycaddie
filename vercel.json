@@ -1,6 +1,11 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/signup", "destination": "/download", "permanent": true },
+    { "source": "/early-access", "destination": "/download", "permanent": true },
+    { "source": "/features", "destination": "/", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/s/:id([A-Za-z0-9_-]+)",
