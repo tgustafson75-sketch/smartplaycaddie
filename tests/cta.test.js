@@ -1,0 +1,23 @@
+// node --test tests/  — date switch and platform pick for js/cta.js
+const test = require('node:test');
+const assert = require('node:assert');
+const { trialText, platformOf } = require('../js/cta.js');
+
+test('Dec 31 2026 (Pacific) shows the 2-month offer', () => {
+  assert.strictEqual(trialText(new Date('2026-12-31T12:00:00-08:00')), 'Free for 2 months — offer ends Dec 31.');
+  // 11:59 pm Pacific on Dec 31 is already Jan 1 in UTC: still the 2-month offer
+  assert.strictEqual(trialText(new Date('2026-12-31T23:59:00-08:00')), 'Free for 2 months — offer ends Dec 31.');
+});
+
+test('Jan 1 2027 (Pacific) shows the 14-day trial', () => {
+  assert.strictEqual(trialText(new Date('2027-01-01T00:00:00-08:00')), 'Try it free for 14 days.');
+  assert.strictEqual(trialText(new Date('2027-01-01T12:00:00-08:00')), 'Try it free for 14 days.');
+});
+
+test('platform pick for the sticky bar', () => {
+  assert.strictEqual(platformOf('Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)', 5), 'ios');
+  assert.strictEqual(platformOf('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', 5), 'ios'); // iPadOS
+  assert.strictEqual(platformOf('Mozilla/5.0 (Linux; Android 15; Pixel 9)', 5), 'android');
+  assert.strictEqual(platformOf('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', 0), 'both');
+  assert.strictEqual(platformOf('', 0), 'both');
+});

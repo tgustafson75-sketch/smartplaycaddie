@@ -149,3 +149,33 @@ footer a:hover{color:var(--cream)}
 .watch .yt-len{position:absolute;right:16px;bottom:14px;background:rgba(11,31,19,.85);color:var(--cream);font-size:13px;
   font-weight:600;padding:4px 9px;border-radius:7px}
 .watch .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+/* store badges: the primary download buttons (black, like the stores' own badges) */
+.badge{display:inline-flex; flex-direction:column; justify-content:center; min-width:168px; height:54px;
+  padding:0 20px; border-radius:11px; background:#000; color:#fff; border:1px solid #A6A6A6;
+  line-height:1.1; transition:transform .15s ease, border-color .15s ease}
+.badge small{font-size:11px; font-weight:500; letter-spacing:.02em}
+.badge span{font-family:Archivo,Inter,sans-serif; font-weight:700; font-size:20px; letter-spacing:-.01em}
+.badge:hover{text-decoration:none; transform:translateY(-1px); border-color:var(--green-hi)}
+.badge:focus-visible{outline:3px solid var(--green-hi); outline-offset:2px}
+.badge-sm{min-width:0; height:44px; padding:0 14px; border-radius:9px}
+.badge-sm small{font-size:9.5px}
+.badge-sm span{font-size:16px}
+.trial{margin:20px 0 0; font-weight:600; font-size:17px; color:var(--cream)}
+.hero .trial + .btns{margin-top:18px}
+
+/* works everywhere */
+.everywhere .lede + .lede{margin-top:16px}
+
+/* mobile sticky download bar: under 64px tall; the page gets matching bottom padding so the
+   footer's legal links are never underneath it */
+.dlbar{display:none}
+@media (max-width:720px){
+  .dlbar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; gap:10px;
+    justify-content:center; align-items:center;
+    padding:8px 16px calc(8px + env(safe-area-inset-bottom,0px)); box-sizing:content-box;
+    height:44px; background:rgba(11,31,19,.94); backdrop-filter:blur(10px); border-top:1px solid var(--rule)}
+  body.has-dlbar{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+}
+/* links inside body copy need more than color to stand out (WCAG 1.4.1) */
+.card p a,.lede a,details .a a{text-decoration:underline; text-underline-offset:3px}
