@@ -31,3 +31,21 @@ anything served from smartplaycaddie.com are edited and published HERE.
 - `/Users/timothyg/smartplaycaddie_review.zip` — a review snapshot
 
 **Active project = `/Users/timothyg/smartplay`.**
+
+## Self-heal (SmartPlay standard, required)
+
+Spec: smartplay-gate docs/SELF-HEAL-STANDARD.md.
+
+Every time you work in this repo, before finishing:
+1. Check this app has all four v1 pieces: error reporting tagged with app name, version and platform; a one-tap "Report a problem"; a startup health check that reports failures; a self-update path (web: reload on new deploy; Expo: EAS Update channel; Chrome extension: lab self-reload).
+2. Build any missing piece as part of the current work, with a test.
+3. Never put personal, health or page content in a report.
+4. Fixes are never merged without Tim's approval; shipping and rollback may be automatic.
+
+Done when all four pieces exist, are tested, and the app's line in SELF-HEAL-STANDARD.md "Where each app stands" is updated.
+
+**This site (2026-11-19):** v1 4/4 in code. `js/selfheal.js` (client, every page except the legal
+pages) → `api/report.js` / `api/health.js` → `lib/selfheal.js`. Report a problem is in the footer.
+Self-update needs no code: Vercel serves HTML with max-age=0 and `sw.js` only unregisters itself.
+`SENTRY_DSN` is not set yet, so reports land in the Vercel function log and /api/health says so.
+Tests: `node --test tests/*.test.js`.
