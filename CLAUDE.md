@@ -49,3 +49,13 @@ pages) → `api/report.js` / `api/health.js` → `lib/selfheal.js`. Report a pro
 Self-update needs no code: Vercel serves HTML with max-age=0 and `sw.js` only unregisters itself.
 `SENTRY_DSN` set 2026-11-19 on Vercel (production + preview) for Sentry project `smartplaycaddie-web` (org smartplay-ai); reports go to Sentry.
 Tests: `node --test tests/*.test.js`.
+
+## SmartPlay Honesty Principles (2026-11-20) — included in every build
+
+Every SmartPlay app ships these five promises at no extra charge. They're how we build, not an upgrade. Never put one behind a paywall. Check every feature against all five before calling it done.
+
+1. **It speaks up and fixes itself (self-healing).** The app finds its own problems, fixes what it can, and tells the user before it costs them.
+2. **Every answer shows its source (truth layer).** No made-up numbers, no filler. The user can always see what an insight is based on.
+3. **It never claims more than it can prove (claim guard).** Language the product can't back up is blocked automatically.
+4. **Your data is protected from day one (Defender security gate).** Security is the foundation, not a retrofit.
+5. **Built for everyone who'll use it (accessibility).** Large text, screen readers, high contrast, one-hand use.
