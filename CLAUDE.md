@@ -47,5 +47,5 @@ Done when all four pieces exist, are tested, and the app's line in SELF-HEAL-STA
 **This site (2026-11-19):** v1 4/4 in code. `js/selfheal.js` (client, every page except the legal
 pages) → `api/report.js` / `api/health.js` → `lib/selfheal.js`. Report a problem is in the footer.
 Self-update needs no code: Vercel serves HTML with max-age=0 and `sw.js` only unregisters itself.
-`SENTRY_DSN` is not set yet, so reports land in the Vercel function log and /api/health says so.
+`SENTRY_DSN` set 2026-11-19 on Vercel (production + preview) for Sentry project `smartplaycaddie-web` (org smartplay-ai); reports go to Sentry.
 Tests: `node --test tests/*.test.js`.
