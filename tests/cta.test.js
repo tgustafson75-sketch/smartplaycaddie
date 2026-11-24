@@ -29,3 +29,20 @@ test('platform pick for the sticky bar', () => {
   assert.strictEqual(platformOf('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)', 0), 'both');
   assert.strictEqual(platformOf('', 0), 'both');
 });
+
+const { getTarget, storeOfHref } = require('../js/cta.js');
+
+test('/get sends phones to their store and keeps computers on the QR page', () => {
+  assert.strictEqual(getTarget('ios'), 'https://apps.apple.com/us/app/id6772344465');
+  assert.strictEqual(getTarget('android'), 'https://play.google.com/store/apps/details?id=com.smartplaycaddie.app');
+  assert.strictEqual(getTarget('both'), null);
+});
+
+test('download links are recognised for tap counting', () => {
+  assert.strictEqual(storeOfHref('https://apps.apple.com/us/app/id6772344465'), 'app_store');
+  assert.strictEqual(storeOfHref('https://play.google.com/store/apps/details?id=com.smartplaycaddie.app'), 'google_play');
+  assert.strictEqual(storeOfHref('/get?utm_source=site'), 'smart_link');
+  assert.strictEqual(storeOfHref('https://smartplaycaddie.com/get'), 'smart_link');
+  assert.strictEqual(storeOfHref('/getting-started'), null);
+  assert.strictEqual(storeOfHref('/faq'), null);
+});
